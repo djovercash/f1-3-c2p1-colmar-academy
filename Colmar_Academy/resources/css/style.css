@@ -1,0 +1,465 @@
+/* General Styling */
+html {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  height: 64px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+h4 {
+  margin-bottom: 24px;
+}
+
+p {
+  font-weight: lighter;
+}
+
+button {
+  background-color: #000000;
+  width: 100%;
+  padding: 8px 0;
+  color: white;
+  font-size: 1.25em;
+  transition: background-color 300ms linear 0ms;
+}
+
+button:hover {
+  background-color: #1669D3;
+}
+
+/* Header Section */
+.desktopNav {
+  display: none;
+  align-items: center;
+}
+
+.mobileNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  display: flex;
+}
+
+nav li a {
+  color: black;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 480px) {
+  .mobileNav {
+    display: none;
+  }
+
+  .desktopNav {
+    display: flex;
+    margin-left: 24px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo span {
+    font-weight: bold;
+  }
+
+  nav li:nth-child(n+1) {
+    margin-right: 16px;
+  }
+
+  nav li:last-child {
+    margin-right: 24px;
+  }
+}
+
+/* Banner Section */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #B5B8BD;
+}
+
+.bannerLeft {
+  width: 100%;
+  height: auto;
+  background: url('../images/banner.jpg');
+  background-size: cover;
+}
+
+.bannerRight {
+  padding: 32px 16px;
+}
+
+@media only screen and (min-width: 480px) {
+  .banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #B5B8BD;
+  }
+
+  .bannerLeft {
+    background: none;
+    height: auto;
+    width: 60%;
+    padding: 32px 24px;
+  }
+
+  .bannerLeft img {
+    display: flex;
+  }
+
+  .bannerRight {
+    max-width: 423px;
+  }
+
+  .BannerRight h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* Highlights Section */
+.highlights {
+  padding: 16px 16px 32px;
+}
+
+.highlightsLeft {
+  height: 150px;
+  overflow: hidden;
+}
+
+#highlightsQuote {
+  font-style: italic;
+  margin-top: 32px;
+}
+
+.highlightsText {
+  padding: 8px 16px;
+}
+
+.highlightsText h3,
+.highlightsText p {
+  margin-bottom: 8px;
+}
+
+.highlightsLeftMobile,
+img.highlightsImgDesktop {
+  display: none;
+}
+
+.highlightsText a{
+  color: #1669D3;
+}
+
+@media only screen and (min-width: 480px) {
+  .highlights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+
+  .highlightsLeftMobile {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 32px 24px;
+  }
+
+  .highlightsLeftMobile img {
+    min-height: 350px;
+  }
+
+  .highlightsLeftMobile h2 {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  .highlightsLeft  {
+    height: auto;
+  }
+
+  .highlightsFeature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid grey;
+    padding: 16px;
+    max-width: 423px;
+  }
+
+  img.highlightsImgDesktop {
+    display: unset;
+  }
+
+  .highlightsImgMobile {
+    display: none;
+  }
+
+  .highlightsFeature img{
+    width: 35%;
+  }
+
+  .highlightsRight div:first-child {
+    margin-top: 16px;
+  }
+
+  .highlights div:nth-child(n+2) {
+    border-top: none;
+  }
+
+  .highlightsRight {
+    padding-bottom: 32px;
+  }
+
+  #highlightsQuote{
+    margin-top: 32px;
+  }
+
+  #highlightsLecture{
+    background-color: #B5B8BD;
+  }
+}
+
+/* Course Section */
+.courses {
+  padding: 32px 16px;
+}
+
+.courses h2,
+.thesis h2 {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.courses img,
+.courses .courseText p {
+  display: none;
+}
+
+.courseText h3 {
+  padding: 16px;
+  background: #B5B8BD;
+  margin-bottom: 8px;
+}
+
+
+@media only screen and (min-width: 480px) {
+  .courses {
+    background: #B5B8BD;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .coursesRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .courseBlock {
+    width: 250px;
+    margin-right: 16px;
+    margin-left: 12px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  .courses img,
+  .courses .courseText p {
+    display: flex;
+  }
+
+  .courses img {
+    height: 150px;
+  }
+
+  .courseText h3,
+  .courseText {
+    background: white;
+  }
+
+  .courseText p {
+    padding: 0 16px 8px;
+  }
+
+  .courseText p:last-child {
+    padding: 0 16px 24px;
+    font-size: .75em;
+  }
+
+  .courseText {
+    min-height: 150px;
+  }
+}
+
+/* Thesis Section */
+.thesisRight,
+.thesisLeft h3,
+.thesisLeft p {
+  display: none;
+}
+
+.thesis h2 {
+  padding: 32px 0;
+}
+
+
+@media only screen and (min-width: 480px) {
+  .thesisRight {
+    display: block;
+  }
+
+  .thesisContainer {
+    display: flex;
+    flex-direction: row;
+    padding-left: 24px;
+    margin-bottom: 32px;
+  }
+
+  .thesisBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    max-width: 423px;
+    height: 168px;
+  }
+
+  .thesisBlock img {
+    width: 35%;
+    margin-right: 16px;
+  }
+
+  .thesisText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thesisText p {
+    margin-top: 8px;
+  }
+
+  .thesisBlock:first-child {
+    background: #B5B8BD;
+  }
+
+  .thesisLeft {
+    margin-right: 24px;
+    width: 60%;
+  }
+
+  .thesisLeft h3,
+  .thesisLeft p {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+  }
+}
+
+
+/* Footer Section */
+footer nav {
+  display: none;
+}
+
+.socialMediaMobile {
+  display: flex;
+  justify-content: center;
+}
+
+.socialMediaMobile i{
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  color: #000000;
+  transition: color 300ms linear 0ms;
+}
+
+.socialMediaMobile i:hover {
+  color: #1669D3;
+}
+
+footer {
+  padding: 32px 0;
+}
+
+.copyright {
+  margin-left: 24px;
+}
+
+@media only screen and (min-width: 480px) {
+  footer {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .socialMediaMobile {
+    display: none;
+  }
+
+  footer nav {
+    display: flex;
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer nav ul li:first-child {
+    margin-right: 16px;
+  }
+}
